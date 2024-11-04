@@ -14,8 +14,8 @@ spring:
       on-profile: dev
   datasource:
     url: jdbc:mysql://localhost:13306/wanted_preonboarding?serverTimezone=UTC&characterEncoding=UTF-8
-    username: wanted
-    password: backend
+    username: root
+    password: wanted
     driver-class-name: com.mysql.cj.jdbc.Driver
   # JPA 설정
   jpa:
@@ -27,6 +27,7 @@ spring:
         globally_quoted_identifiers: false
         format_sql: true     # 쿼리 로그 포맷 (정렬)
         show_sql: true       # 쿼리 로그 출력
+        dialect: org.hibernate.dialect.MySQLDialect
 
 pg:
   tosspayments:

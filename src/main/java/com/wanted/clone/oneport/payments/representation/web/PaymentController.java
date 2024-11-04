@@ -17,6 +17,7 @@ public class PaymentController {
     @GetMapping("/request")
     public String paymentRequest(PaymentRequestMessage message, Model model) {
         model.addAttribute("userId", "jinho-yoo");
+
         return paymentRequestUseCase.renderPgUi();
     }
 
